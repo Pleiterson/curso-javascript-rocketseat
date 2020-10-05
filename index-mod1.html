@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Curso JavaScript Rocketseat - Módulo 1</title>
+    </head>
+    <body>
+        <script>
+            /* declaração de variáveis */
+            var nome = "Diego"; // variável do tipo string
+            var idade = 23; // variável do tipo inteiro
+            var peso = 80.5; // variável do tipo float
+            var humano = true; // variável do tipo boolean
+
+            // variável do tipo vetor, salvando várias informações em uma única variável
+            var alunos = ['Diego', 'Gabriel', 'Lucas'];
+
+            // declaração de objetos
+            var aluno = {
+                nome = "Diego",
+                idade = 23,
+                peso = 80.5,
+                humano = true
+            };
+
+            // imprimindo os valores na tela            
+            console.log(alunos[1]);
+            console.log(aluno.peso);
+
+            /* operações matemáticas */
+            var x = 10, y = 5;
+
+            x = x + 3;
+            x += 3; // funciona da mesma forma que descrito anteriormente, pode usar qualquer operador matemático
+
+            console.log(x);
+
+            /* funções */
+            // recebendo dois valores interiros por parâmetro
+            function soma(number1, number2) {
+                // variável visível apenas dentro do escopo da função soma
+                var result = number1 + number2;
+
+                return result;
+            }
+
+            // passando dois números inteiros por parâmetro para a função soma
+            var result = soma(1, 2);
+            console.log(result);
+
+            /* condicionais */
+            function retornaSexo(sexo) {
+                var masculino; // guardando o valor de uma condição            
+                //var masculino = (sex === 'M'); // mesma forma que anteiormente
+
+                // condicional if
+                if (sexo === 'M') { // 3 iguais, verifica o valor e o tipo da variável
+                    masculino = true;
+
+                    return 'Masculino';
+                } else if (sexo ==='F') { // 2 iguais, compara os dois valores da variável
+                    masculino = false;
+
+                    return 'Feminino';
+                } else {
+                    return'Outro';
+                }
+            }
+
+            var result = retornaSexo('sdadsa');
+            console.log(result);
+            console.log(masculino);
+
+            function retornaSex(sexo) {
+                // condicional swith
+                switch(sexo) {
+                    case 'M':
+                        return 'Masculino';
+                    case 'F':
+                        return 'Feminino';
+                    default:
+                        return 'Outro';
+                }
+            }
+
+            var result = retornaSex('sdadsa');
+            console.log(result);
+
+            /* operadores lógicos */
+            //and, or, not
+            var sexo = 'F', idade =10;
+
+            // operador and (e)
+            if (sexo === 'F' && idade >= 18) {
+                console.log('Ok');
+            }
+
+            // operador or (ou)
+            if (sexo === 'M' || idade >= 18) {
+                console.log('Ok');
+            }
+
+            // operador not
+            var sex = 'F';
+            
+            if (sex !== 'M') { // pode ser também !=               
+                console.log('Ok');
+            }
+
+            /* condição ternária */
+            var sexo = 'M';
+
+            // codição ternária
+            var retorno = (sexo === 'M') ? 'Masculino' : 'Feminino';
+            console.log(retorno);
+
+            /* estruturas de repetição */
+            // for, while
+            for (var i = 0; i <= 100; i++) {
+                console.log(i);
+            }
+
+            var j = 0;
+            while (j <= 100) {
+                console.log (j);
+                j++;
+            }
+
+            var w = 5465465;
+            while (w > 50) {
+                console.log (w);
+                w /= 5; // assim conseguimos ver quantas vezes o while foi executado
+            }
+
+            /* intervalo e timeout */
+            function exibeAlgo() {
+                console.log('Hello World');                
+            }
+
+            setInterval(exibeAlgo, 1000); // a cada 1s vai executar a função exibeAlgo
+            /* quando não utilizamos os parenteses da função, estamos executando apenas o escopo dela. Mas quando utilizamos os parenteses, a função executará naquele momento e não terá o resultado esperado */
+
+            setTimeout(exibeAlgo, 5000); // vai executar 5s, delay
+        </script>
+    </body>
+</html>
