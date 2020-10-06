@@ -24,14 +24,13 @@ Este repositório são apenas os exercícios finais de cada módulo do curso Roc
 <h3>🚀 O que foi visto nas aulas</h3>
 
 - <b>Módulo 1 | <i>Introdução ao JavaScript</i></b>
-	- Introdução; Configurando ambiente; 
-Variáveis e dados; Operações matemáticas; Funções; Condicionais; Operadores lógicos; Condição ternária; Estruturas de repetição; Intervalo e timeout e Desafio.
+	- Introdução; Configurando ambiente; Variáveis e dados; Operações matemáticas; Funções; Condicionais; Operadores lógicos; Condição ternária; Estruturas de repetição; Intervalo e timeout e Desafio.
   
 - <b>Módulo 2 | <i>Manipulando a DOM</i></b>
 	- Trabalhando com a DOM; Lidando com elementos; Alterando estilos e Desafio.
   
 - <b>Módulo 3 | <i>App de todos</i></b>
-	- Estrutura do app;Iniciando aplicação; Renderizando Todos; Criando Todos; Excluindo Todos e Salvando no storage.
+	- Estrutura do app; Iniciando aplicação; Renderizando Todos; Criando Todos; Excluindo Todos e Salvando no storage.
   
 - <b>Módulo 4 | <i>JS Assíncrono</i></b>
 	- Requisições AJAX; Promises; Utilizando Axios e Desafio.
