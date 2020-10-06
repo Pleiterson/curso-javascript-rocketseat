@@ -5,7 +5,91 @@
         <title>Curso JavaScript Rocketseat - Módulo 2</title>
     </head>
     <body>
+        <div id="app">
+            ** Eventos inline **<br><br>
+            <button onclick="mostraAlerta()">Me pressione</button> Envento onlick<br><br>
+            <button onmouseover="mostraAlerta()">Me pressione</button> Evento onmouseover<br><br>
+            <input onkeypress="mostraAlerta()"> Evento onkeypress<br><br><br>    
+        </div>
+        <div id="name">
+            ** Trabalhando com a DOM **<br><br>
+            <input type="text" name="name" id="name" class="name">
+            <button class="botao">Adicionar</button><br><br><br> 
+        </div>
+        <div id="nome">
+            ** Lidando com elementos **<br><br>
+            <input id="teste">
+        </div>
+        <br><br><br>
+        <div id="appp">
+            ** Alterando estilos **<br><br>
+            <div class="box"></div>
+        </div>            
+        <br><br><br>
+        <!-- exercícios -->
+        Exercícios do Módulo<br><br>        
+        <a href="./exercicio-modulo-2/exercicio1.html">Exercício 1</a>
+        <a href="./exercicio-modulo-2/exercicio2.html">Exercício 2</a>
+        <a href="./exercicio-modulo-2/exercicio3.html">Exercício 3</a>
+        <a href="./exercicio-modulo-2/exercicio4.html">Exercício 4</a>        
         <script>
+            /* eventos inline */
+            // DOM é a árvore de elementos do código HTML
+            function mostraAlerta(){
+                alert('Botão foi clicado');
+            }
+
+            /* trabalhando com a DOM */
+            // busca um elemento chamado name
+            var inputElement = document.getElementById('name');
+            console.log(inputElement);
+
+            // busca um elemento chamado input, ele sempre retorna um vetor
+            var inputElement = document.getElementsByTagName('input');
+            console.log(inputElement);
+
+            // busca um elemento chamado name, ele sempre retorna um vetor
+            var inputElement = document.getElementsByClassName('name'); // id é um único elemento
+            console.log(inputElement);
+
+            // percorre por toda a DOM até encontrar o elemento
+            var inputElement = document.querySelector('div#name input');
+            console.log(inputElement);
+
+            // caso tenha mais de um, o querySelector retornará sempre o primeiro
+            var inputElement = document.querySelector('input[name=name]');
+            console.log(inputElement);
+
+            // querySelectorAll retornará todos os inputs
+            var inputElement = document.querySelectorAll('input');
+            console.log(inputElement);
+
+            var inputElement = document.querySelector('input[name=name]');
+            var btnElement = document.querySelector('button.botao');
+            btnElement.onclick = function() {
+                var text = inputElement.value; // colocando o texto na mensagem ao clicar no botão
+                alert(text);
+            }
+
+            /* lidando com elementos */
+            var linkElement = document.createElement('a');
+            linkElement.setAttribute('href', 'https://goole.com.br');
+            linkElement.setAttribute('tittle', 'Google');
+
+            var textElement = document.createTextNode('Acessar Google');
+            linkElement.appendChild(textElement);
+
+            var containerElement = document.querySelector('#nome');
+            containerElement.appendChild(linkElement);
+
+            var inputElement = document.querySelector('#teste');
+            containerElement.removeChild(inputElement);
+
+            /* alterando estilos */
+            var boxElement = document.querySelector('.box');
+            boxElement.style.width = '100px';
+            boxElement.style.height = '100px';
+            boxElement.style.backgroundColor = '#f00';            
         </script>
     </body>
 </html>

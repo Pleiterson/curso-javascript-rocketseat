@@ -1,0 +1,40 @@
+<!-- A partir do seguinte vetor:
+
+var nomes = ["Diego", "Gabriel", "Lucas"];
+
+Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+l Diego
+l Gabriel
+l Lucas -->
+
+<!-- resolução do exercício três -->
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Resolução do exercício 3</title>
+    </head>
+    <body>
+        <p>A partir do seguinte vetor:</p>
+        <pre>var nomes = ["Diego", "Gabriel", "Lucas"];</pre>
+        <p>Preencha uma lista (< ul >) no HTML com os itens da seguinte forma:
+        l Diego<br>
+        l Gabriel<br>
+        l Lucas></p><br>
+        <a href="./exercicio2.html">Voltar para exercício 2</a><br>
+        <a href="./exercicio4.html">Ir para o exercício 4</a><br><br><br>
+        <ul></ul>       
+        <script>
+            var names = ["Diego", "Gabriel", "Lucas"];
+            var listElement = document.querySelector('ul');
+
+            for(name of names) {
+                var element = document.createElement('li');
+                var textElement = document.createTextNode(name);
+
+                element.appendChild(textElement);
+                listElement.appendChild(element);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,48 @@
+<!-- Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:
+
+<input type="text" name="nome">
+<button onClick="adicionar()">Adicionar</button>
+
+Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de
+nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos
+demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique. -->
+
+<!-- resolução do exercício quatro -->
+<!DOCTYPE html>
+<html lang="pt_br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Resolução do exercício 4</title>
+    </head>
+    <body>
+        <p>Seguindo o resultado do exercício anterior adicione um input em tela e um botão como a seguir:</p>
+        <pre>< input type="text" name="nome" ><br>< button onClick="adicionar()">Adicionar< /button ></pre>
+        <p>Ao clicar no botão, a função adicionar() deve ser disparada adicionando um novo item a lista de nomes baseado no nome preenchido no input e renderizando o novo item em tela juntos aos demais itens anteriores. Além disso, o conteúdo do input deve ser apagado após o clique.</p><br>
+        <a href="./exercicio3.html">Voltar para exercício 3</a><br><br><br>        
+        <ul></ul> 
+        <input type="text" name="nome">
+        <button onClick="adicionar()">Adicionar</button>      
+        <script>
+            var names = ["Diego", "Gabriel", "Lucas"];
+            var listElement = document.querySelector('ul');
+            var inputElement = document.querySelector('input');
+
+            function addItem(text) {
+                var element = document.createElement('li');
+                var textElement = document.createTextNode(text);
+    
+                element.appendChild(textElement);
+                listElement.appendChild(element);
+            }
+
+            for(name of names) {
+                addItem(name);
+            }
+
+            function adicionar() {
+                addItem(inputElement.value);
+                inputElement.value = ""; // limpando o input
+            }
+        </script>
+    </body>
+</html>
